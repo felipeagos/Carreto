@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Redirecionando...</title>
+</head>
+<body>
+    <script>
+        var urlParams = new URLSearchParams(window.location.search);
+        var gclid = urlParams.get('gclid') || '';
+
+        var telefone = "5511958137605";
+        var mensagemBase = "Oi Felipe, preciso de um carreto de Santo André.";
+        
+        var mensagemFinal = mensagemBase + (gclid ? " ID: " + gclid : "");
+        var linkWhatsApp = "https://whatsapp.com" + telefone + "&text=" + encodeURIComponent(mensagemFinal);
+
+        window.location.href = linkWhatsApp;
+    </script>
+</body>
+</html>
