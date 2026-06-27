@@ -13,9 +13,10 @@
         var mensagemBase = "Oi Felipe, preciso de um carreto de Santo André.";
         
         var mensagemFinal = mensagemBase + (gclid ? " ID: " + gclid : "");
-        var linkWhatsApp = "https://whatsapp.com" + telefone + "&text=" + encodeURIComponent(mensagemFinal);
+        location.href = "https://wa.me/" + telefone + "?text=" + encodeURIComponent(mensagemFinal);
 
-        window.location.href = linkWhatsApp;
+
+        
     </script>
 </body>
 </html>
